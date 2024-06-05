@@ -1,0 +1,407 @@
+.container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+.header {
+    background-color: #fcfcff;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 17px;
+    color: #1d1d1f;
+    white-space: nowrap;
+    justify-content: center;
+    height: 40px;
+}
+@media (max-width: 991px) {
+    .header {
+        max-width: 100%;
+        white-space: initial;
+    }
+}
+.top-content {
+    background-color: #fcfcff;
+    margin-left: 70px;
+    display: flex;
+    width: 643px;
+    max-width: 100%;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 7px 0px;
+}
+@media (max-width: 991px) {
+    .top-content {
+        flex-wrap: wrap;
+        white-space: initial;
+    }
+}
+
+.icon {
+    object-fit: auto;
+    object-position: center;
+    width: 10px;
+    height: auto;
+    align-self: stretch;
+    margin: auto 0;
+    transition: filter 0.5s ease; 
+    filter: invert(25%);
+}
+
+.icon:hover {
+    filter: none;
+  }
+
+.brand, .product-name, .model {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 10px;
+    font-weight: 50px;
+    align-self: stretch;
+    margin: auto 0;
+    transition: filter 0.5s ease; 
+    filter: invert(25%);
+}
+.brand:hover, .product-name:hover, .model:hover{
+    filter: none;
+    font-weight: 52px;
+}
+
+a {
+    text-decoration: none;  /* Removes the underline from the link */
+    color: #1d1d1f;         /* Sets the link color to black, change as needed */
+}
+.icon-small, .icon-large {
+    object-fit: auto;
+    object-position: center;
+    width: 15px;
+    height: auto;
+    align-self: start;
+    transition: filter 0.5s ease; 
+    filter: invert(25%);
+}
+
+.icon-small:hover, .icon-large:hover {
+    filter: none;
+}
+
+#searchbutton {
+    border: none;        /* Removes the default button border */
+    outline: none;       /* Removes the outline to avoid a boxy look */
+    background: none;    /* Removes the default background */
+    padding: 0;          /* Removes padding */
+    cursor: pointer;     /* Changes the cursor to indicate it's clickable */
+  }
+
+  #dropdownBar {
+    font-family: SF Pro Text, sans-serif;
+    background-color: #fcfcff;  /* Light grayish-blue color */
+    color: #1d1d1f;
+    position: fixed;
+    top: 34px;  /* Adjust based on the height of your header */
+    left: 0;
+    width: 100%;  /* Full width */
+    height: 0;  /* Initially no height */
+    overflow: hidden;  /* Hides any content that exceeds the height */
+    display: block;  /* Always block to allow transitions */
+    z-index: 50;  /* Above content but below fixed items like modals */
+    transition: height 0.3s ease;  /* Smooth transition for the height property */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 120px; /* Adjust based on the height of your header and dropdownBar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: backdrop-filter 0.3s ease;
+    z-index: 49; /* Below dropdownBar but above other contents */
+}
+
+.main-content {
+    transition: filter 0.3s ease;
+}
+
+.blur-content {
+    filter: blur(10px); /* Apply the blur effect */
+}
+#searchdrop {
+    width: 1%;
+    height: auto;
+    margin-left: 35.8%;
+    margin-bottom: -3px
+}
+#searchContainer {
+    margin-top: 50px;
+}
+#searchInput {
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+#searchInput:focus{
+    outline: none;
+}
+
+#arrow {
+    width: 0.4%;
+    height: auto;
+    transform: rotate(180deg);
+    margin-left: 36%;
+}
+
+#quicklinks {
+    color: #8E8E8E;
+    font-size: 8px;
+    font-weight: normal;
+    margin-left: 35.9%;
+    margin-top: 20px;
+}
+
+#findastore {
+    font-size: 10px;
+}
+
+#Applevisionpro {
+    font-size: 10px;
+}
+
+#airpods {
+    font-size: 10px;
+}
+
+#airtag {
+    font-size: 10px;
+}
+
+#appletradein {
+    font-size: 10px;
+}
+
+.product-list {
+    background-color: #fcfcff;
+    display: flex;
+    flex-direction: row;  /* Ensures that children are laid out horizontally */
+    align-items: center;  /* Aligns children vertically in the center */
+    justify-content: center;  /* Centers children horizontally in the container */
+    gap: 40px;
+    font-size: 17px;
+    font-weight: 100;
+    color: #1d1d1f;
+    width: 100%;  /* Ensures the container takes full width of its parent */
+    flex-wrap: wrap;  
+}
+
+.product-img {
+    margin-left: 17px;
+    aspect-ratio: 0.67;
+    object-fit: auto;
+    object-position: center;
+    width: 72px;
+    align-self: center;
+    max-width: 35%;
+    max-height: 35%;
+    margin-top: 30px;
+}
+
+.product-img:hover {
+    filter: none;
+}
+
+.product-left {
+    font-family: SF Pro Text;
+    font-size: 12px;
+    margin-left: 8px;
+    margin-bottom: 30px;
+    transition: filter 0.5s ease; 
+    filter: invert(20%);
+}
+
+.product-left:hover {
+    filter: none;
+}
+
+.product-center {
+    font-family: SF Pro Text;
+    font-size: 12px;
+    margin-left: 19px;
+    margin-bottom: 30px;
+    transition: filter 0.5s ease; 
+    filter: invert(20%);
+}
+
+.product-right:hover {
+    filter: none;
+}
+
+.product-right {
+    font-family: SF Pro Text;
+    font-size: 12px;
+    margin-left: 11px;
+    margin-bottom: 30px;
+    transition: filter 0.5s ease; 
+    filter: invert(20%);
+}
+
+.product-center:hover {
+    filter: none;
+}
+
+@media (max-width: 991px) {
+    .product-item-center {
+        white-space: initial;
+    }
+}
+.credit-banner {
+    display: flex;
+    font-family: SF Pro Text;
+    font-weight: 100;
+    font-size: 11px;
+    background-color: #f7f7f7;
+    width: 100%;
+    align-items: center;
+    color: #1d1d1f;
+    justify-content: center;
+    padding: 7px 0px;
+}
+.highlight {
+    color: #0071e3;
+}
+@media (max-width: 991px) {
+    .credit-banner {
+        max-width: 100%;
+    }
+}
+.promo-section {
+    align-self: center;
+    display: flex;
+    width: 100%;
+    gap: 60px;
+    text-align: center;
+    position: relative;
+}
+@media (max-width: 991px) {
+    .promo-section {
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        justify-content: center;
+    }
+}
+#promo-iCup {
+    color: #1d1d1f;
+    font: 75px SF Pro Text;
+    font-weight: 600;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+}
+#promo-Iseeyoupee {
+    color: #1d1d1f;
+    font: 35px SF Pro Text;
+    font-weight: 600;
+    position: absolute;
+    right: 200px;
+    top: 80px;
+}
+#showcase {
+    margin-top: 200px; /* Adjust the value to suit your needs */
+    width: 100%;  /* Start with full width */
+    transition: width 0.5s;
+  }
+
+  
+@media (max-width: 991px) {
+    .main-banner {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.Gettoknow-icup {
+    color: #1d1d1f;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 40px SF Pro Text;
+    font-weight: 600;
+    justify-content: space-around;
+    margin-left: 100px;
+    padding: 20px 0px;
+}
+.video-container {
+    display: flex;
+    overflow: hidden;
+    padding: 30px 80.625px;
+    gap: 20px;
+}
+
+.video-1 video {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.video-1:hover video {
+    transform: scale(1.01);  /* Increase the video size by 20% on hover */
+}
+
+.video-2 video {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.video-2:hover video {
+    transform: scale(1.01);  /* Increase the video size by 20% on hover */
+}
+
+.video-3 video {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.video-3:hover video {
+    transform: scale(1.01);  /* Increase the video size by 20% on hover */
+}
+
+#firstcard {
+    width: auto; /* Respects the original width of the video */
+    height: auto; /* Respects the original height of the video */
+    max-width: 100%;
+    border-radius: 32px;
+  }
+
+  #secondcard {
+    width: auto; /* Respects the original width of the video */
+    height: auto; /* Respects the original height of the video */
+    max-width: 100%;
+    border-radius: 32px;
+  }
+
+  #thirdcard {
+    width: auto; /* Respects the original width of the video */
+    height: auto; /* Respects the original height of the video */
+    max-width: 100%;
+    border-radius: 32px;
+  }
+  
+  #disclaimer {
+    color: #7a7a7c;
+    background-color: #f9f9fa;
+    font-family: 'SF Pro Text', sans-serif;
+    font-size: 10px; /* Fixed missing semicolon */
+    text-align: center; /* Centers the text horizontally */
+    width: 600px;
+    margin-left: 700px;
+}
+#discontainer {
+    background-color: #f9f9fa
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
